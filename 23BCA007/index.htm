@@ -1,0 +1,88 @@
+<html>
+<head>
+
+<style>
+body 
+{
+      	margin: 0;
+      	padding: 0;
+      	height: 100vh;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	background-color: #f0f0f0;
+      	font-family: Arial, sans-serif;
+}
+
+.login-container 
+{
+      	background-color: #fff;
+      	padding: 40px;
+      	border-radius: 10px;
+      	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      	width: 300px;
+      	text-align: center;
+}
+
+h2 
+{
+      	margin-bottom: 20px;
+      	color: #333;
+}
+
+.txt
+{
+      	width: 100%;
+      	padding: 10px;
+      	margin: 10px 0;
+      	border: 1px solid #ccc;
+      	border-radius: 5px;
+      	box-sizing: border-box;
+}
+
+#submit
+{
+      	background-color: #38a2d0;
+      	color: white;
+      	padding: 10px;
+      	width: 100%;
+      	border: none;
+      	border-radius: 5px;
+      	cursor: pointer;
+      	font-size: 16px;
+}
+
+#submit:hover 
+{
+      	background-color: #338eb6;
+}
+
+p 
+{
+       	font-size: 14px;
+}
+
+a
+{
+      	color: #2c4a82;
+	text-decoration: none;
+}
+a:hover
+{
+      	text-decoration: underline;
+}
+</style>
+
+</head>
+<body>
+    <div class="login-container">
+    <h2>Login</h2>
+    <form action="http://localhost/user_password_check.php" method="POST">
+      <input type="text" name="username" placeholder="Enter Username" class="txt">
+      <input type="password" name="password" placeholder="Enter Password" class="txt">
+      <input type="submit" name="submit" value="Login" id="submit">
+    </form>
+    <p>Forgot your password? <a href="forgot_password.htm">Click here</a></p>
+  </div>
+</body>
+</html>

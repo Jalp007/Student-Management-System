@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Students by Criteria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        table {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+            padding-right: 15px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .submit-button {
+            background-color: #38a2d0;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .submit-button:hover {
+            background-color: #338eb6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="http://localhost/report_criteria.php">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h2>Filter Students by Criteria</h2>
+                </td>
+            </tr>
+
+            <!-- Grade Dropdown -->
+            <tr>
+                <td>Select Grade:</td>
+                <td>
+                    <select name="grade" id="grade">
+                        <option value="">--Select Grade--</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">FAILED</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Internship Dropdown -->
+            <tr>
+                <td>Internships Done:</td>
+                <td>
+                    <select name="internship" id="internship">
+                        <option value="">--Select Internships--</option>
+                        <option value="1">1 Internship</option>
+                        <option value="2">2 Internships</option>
+                        <option value="3">3 Internships</option>
+                        <option value="4">4 Internships</option>
+                        <option value="5">5 Internships</option>
+                        <option value="6">6 Internships</option>
+                        <option value="7">7 Internships</option>
+                        <option value="8">8 Internships</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Submit Button -->
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" value="Filter" class="submit-button">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<html>
+<head>
+    <title>Student Data Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        
+        table {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+            padding-right: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        .submit-button {
+            background-color: #38a2d0;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .submit-button:hover {
+            background-color: #338eb6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://localhost/insert.php" method="GET">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h2>Enter Student Data</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Enrollment No.</td>
+                <td><input type="text" id="enrollment" name="enrollment" placeholder="Enter Enrollment No." required></td>
+            </tr>
+    
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="name" name="name" placeholder="Enter Student Name" required></td>
+            </tr>
+    
+            <tr>
+                <td>Division</td>
+                <td><input type="text" id="division" name="division" placeholder="Enter Division" required></td>
+            </tr>
+    
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Branch</td>
+                <td>
+                    <select id="branch" name="branch" required>
+                        <option value="" disabled selected>Select Branch</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Computer Applications">Computer Applications</option>
+                        <option value="Chemicals">Chemicals</option>
+                        <option value="Fire and Safety">Fire and Safety</option>
+                        <option value="Business Analytics">Business Analytics</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>CGPA</td>
+                <td><input type="text" id="cgpa" name="cgpa" placeholder="Enter CGPA" required></td>
+            </tr>
+    
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+    
+            <tr>
+                <td>Semester</td>
+                <td>
+                    <select id="semester" name="semester" required>
+                        <option value="" disabled selected>Select Semester</option>
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                        <option value="6">6th</option>
+                        <option value="7">7th</option>
+                        <option value="8">8th</option>
+                    </select>    
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Year</td>
+                <td>
+                    <select id="year" name="year" required>
+                        <option value="" disabled selected>Select Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit" class="submit-button">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
